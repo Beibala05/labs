@@ -89,6 +89,6 @@ int main(int argc, char** argv)
 
 
 /*
-./prog ls -l / ";;" sleep 10 ";;" cat file1.txt file2.txt
+./prog ls -l / ";;" sleep 10 ";;" cat file1.txt file2.txt       
 Команды для выполнения разделены ";;", параллельно выполняем ls -l, sleep 10, cat file1.txt file2.txt
 */
