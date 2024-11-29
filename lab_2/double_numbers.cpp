@@ -224,7 +224,21 @@ DoubleNumbers DoubleNumbers::derivative() const
 
 DoubleNumbers DoubleNumbers::integral() const
 {
-	return DoubleNumbers();
+	if (numbers.size() == 0 || numbers.size() == 1) return DoubleNumbers();
+
+	std::vector<double> result;
+
+	int j = numbers.size();
+
+	for (int i = 0; i < numbers.size(); ++i)
+	{
+		result.push_back(numbers[i] / j);
+		j--;
+	}
+
+	result.push_back(0);
+	
+	return DoubleNumbers(result);
 }
 
 std::ostream& operator<<(std::ostream& os, const DoubleNumbers& numbers)
